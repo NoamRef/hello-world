@@ -1,8 +1,3 @@
-website URL: https://cecroud.github.io/hello-world/
-ID: 207764622
-Name: Noam Refaeli
-
-
 The site i built for the psychologist "Sigmund Freud"<br/>
 The site conatins:<br/>
 	- A short background about Sigmund Freud from wikipedia.<br/>
