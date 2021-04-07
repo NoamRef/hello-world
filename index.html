@@ -1,10 +1,33 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
+    <script>
+        function on_change(el) {
+            var ta = document.getElementById('Textarea')
+            if (el.options[el.selectedIndex].value == '1') {
+                ta.value = ta.value + String.fromCodePoint(0x1F600);
+            }
+            else if (el.options[el.selectedIndex].value == '2') {
+                ta.value = ta.value + String.fromCodePoint(0x1F601);
+            }
+            else if (el.options[el.selectedIndex].value == '3') {
+                ta.value = ta.value + String.fromCodePoint(0x1F602);
+            }
+            else if (el.options[el.selectedIndex].value == '4') {
+                ta.value = ta.value + String.fromCodePoint(0x1F60E);
+            }
+            else if (el.options[el.selectedIndex].value == '5') {
+                ta.value = ta.value + String.fromCodePoint(0x270C);
+            }
+            document.getElementById('mySelect').value = 0
+        }
+    </script>
+    <meta charset=“UTF-8”>
+    <meta name="description" content="The is My first Website about Sigmund Freud,I hope it looks nice and servers you well" />
     <title>Sigmund Freud The Website</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
-<body>
+<body onload="javascript:(function(){document.getElementById('mySelect').value = 0})()">
     <div id="menu" class="menuText">
         <a href="#about">About Me</a>&nbsp;&nbsp;&nbsp;
         <a href="#photos">My Photos</a>&nbsp;&nbsp;&nbsp;
@@ -94,142 +117,142 @@
     <section id="qrcoder" class="section">
         <br />
         <hr />
-        <h1>
-            QR Code
-        </h1>
-            <img src=qrcode.png id="qrcode" class="center" />
+        <h1> QR Code</h1>
+        <div style="text-align:center">
+            <img src=Photos/barcode.jpg id="qrcode" class="center" style="height:150px; width:150px;" />
             <br />
+        </div>
     </section>
 
     <section id="spa" class="section">
         <br />
         <hr />
-        <h1>
-            Ans
-        </h1>
-        <table class="answers" border=1 align=center cellpadding="0" cellspacing="0" bordercolor="white" width="70%">
+        <h1>Q&A</h1>
+        <table class="answers" border=1 align=center cellpadding="0" cellspacing="0" bordercolor="darkgoldenrod" width="90%">
             <tr>
-                <td width="20%">
-                    <h2>
+                <td width="30%" style="text-align:center;">
+                    <h2 style="font-size: 21px; font-weight:bold">
                         Web 1.0
                     </h2>
                 </td>
-                <td width="20%">
-                    <h2>
+                <td width="30%" style="text-align:center;">
+                    <h2 style="font-size: 21px; font-weight:bold">
                         Web 2.0
                     </h2>
                 </td>
-                <td width="20%">
-                    <h2>
+                <td width="30%" style="text-align:center;">
+                    <h2 style="font-size: 21px; font-weight:bold">
                         Web 3.0
                     </h2>
                 </td>
             </tr>
             <tr>
-                <td width="20%">
+                <td width="30%">
                     <h2>
-                        the web is Read-Only and static.
+                        Mostly Read-Only,Content that people consume(e.g. Walla) Company focused static pages.
                     </h2>
                 </td>
-                <td width="20%">
+                <td width="30%">
                     <h2>
-                        the web is wildly Read-Write.
+                        Wildly Read-Write,People publish content that other people can consume(e.g. YouTube) Community Focused dynamic pages.
                     </h2>
                 </td>
-                <td width="20%">
+                <td width="30%">
                     <h2>
-                        the web is portable and personal - Read-Write intelligent web.
+                        Portable and personal - Read-Write intelligent web, people build applications that people can interact with(e.g. Twitter, Facebook, Instagram) Individual Focused pages.
                     </h2>
             </tr>
             <tr>
                 <td width="20%">
                     <h2>
-                        search engines retrieve macro contents. Search is very fast but many times results are inaccurate or more than users can chew.
+                        Search engines retrieve macro contents.<br/>
+                        Search is very fast but many times results are inaccurate.
                     </h2>
                 </td>
                 <td width="20%">
                     <h2>
-                        search engines retrieve tags with micro contents. The process of tagging is manual, tedious and covers negligible percents of the WWW.
+                        Search engines retrieve tags with micro contents.<br />
+                        The process of tagging is manual, tedious and covers negligible percents of the word wide web.
                     </h2>
                 </td>
                 <td width="20%">
                     <h2>
-                        search engines will retrieve micro content texts which were tagged automatically.This implies translating billions of Web 1.0 macro contents into micro contents. The result could be more precise search because tagging can solve part of the ambiguity that homonyms and synonyms introduce into the process of Search.
+                        Search engines will retrieve micro content texts which were tagged automatically.<br />
+                        This implies translating billions of Web 1.0 macro contents into micro contents.<br />
+                        The result could be more precise search because tagging can solve part of the ambiguity that homonyms and synonyms introduce into the process of Search.
                     </h2>
                 </td>
             </tr>
             <tr>
                 <td width="20%">
                     <h2>
-                        Companies publish content that people consume (e.g. Ynet)
+                        Used for Web forms, and uses HTML/Portals.
                     </h2>
                 </td>
                 <td width="20%">
                     <h2>
-                        People publish content  that other people can consume, companies build platforms that let people publish content for other people (e.g. YouTube, Wikipedia)
+                        Used for Web Applications,and uses XML/RSS.
                     </h2>
                 </td>
                 <td width="20%">
                     <h2>
-                        People build applications that people can interact with, companies build platforms that let people publish services by leveraging the associations between people or special content ( e. g. Facebook, Instagram)
+                        Used for Smart Applications, and uses RDF/RDFS/OWL.
                     </h2>
                 </td>
             </tr>
         </table>
         <br>
         <br>
-        <h2 font>
-            <u>
-                Use Case example - noa  kirel
-            </u>
-            <li>
-                Web 1.0 - for finding the relevant data we want about "noa kirel - latest song", the user have to write a specific URL.
-            </li>
-            <li>
-                Web 2.0 - for finding result we can use "noa kirel - latest song" as a query to a search engines
-                and we will get result from the query as web tags.
-            </li>
-            <li>
-                Web 3.0 - for finding result we can use "noa kirel - latest song" as a query to a search engines
-                and we will get result that contain the query words and semantic words as tags or web info.
-            </li>
+        <h2>
+            <u>Case example - "Freud's Major Theories"</u>
+            <br />
+            <ul>
+                <li>
+                    <u><b>Web 1.0</b></u> - To find the relevant data for the search "Freud's Major Theories" the user would have to write a specific URL.
+                </li>
+                <li>
+                    <u><b>Web 2.0</b></u> - To find the relevant data for the serach "Freud's Major Theories" we can use it as a query to a search engines
+                    and we will get result from the query as web tags.
+                </li>
+                <li>
+                    <u><b>Web 3.0</b></u> - To find results about "Freud's Major Theories" you can use it as a query to search engines
+                    and they will get results that contain the query words and semantic words as tags or web info.
+                </li>
+            </ul>
         </h2>
-
     </section>
 
     <section id="contact" class="section">
-        <br />
-        <hr/>
-        <h1>
-            Contact Me
-        </h1>
-        <h2 id="contactSection">
-            so what do you think?<br />
-            send me an e-mail here and let me know.<br />
-        </h2>
-        <h2>
-            <form action="mailto:avivams@post.bgu.ac.il" method="post" enctype="text/plain">
-                Name:<br>
-                <input type="text" name="name"><br>
-                E-mail:<br>
-                <input type="text" name="mail"><br>
-                Comment:<br>
-                <textarea id="myTextarea"></textarea><br /><br />
-                <script>
-
-                    $(document).ready(function () {
-                        $("#myTextarea").emojioneArea({
-                            pickerPosition: "top"
-                        });
-                    })
-
-                </script>
+        <div style="text-align:left" class="form">
+            <br />
+            <hr />
+            <h1 style="text-align:left">Contact Me</h1>
+            <h2>
+                Hey, What's your opnion about the site?<br />
+                I'll be happy to know, what about sending me an E-mail<br />
+            </h2>
+            <form class="form" action="mailto:refaelin@post.bgu.ac.il" method="post" enctype="text/plain">
+                <label>Name:</label>
+                <input type="text" class="form" name="Name: "><br>
+                <label>E-mail:</label>
+                <input type="email" name="E-mail: " class="form"><br>
+                <label>Age:</label>
+                <input style="margin-right:20px" type="text" name="Age: " class="form"><br>
+                <label>Comment:</label>
+                <textarea id="Textarea" name="Text: "style="margin-right:20px" class="form" rows="5"></textarea><br />
+                <label for="mySelect">Add an Emoji</label>
+                <select id="mySelect" onchange='on_change(this)'>
+                    <option disabled="disabled" value='0'>Choose Emoji:</option>
+                    <option value='1'>&#x1F600</option>
+                    <option value='2'>&#x1F601</option>
+                    <option value='3'>&#x1F602</option>
+                    <option value='4'>&#x1F60E</option>
+                    <option value='5'>&#x270C</option>
+                </select>
                 <input type="submit" value="Send">
                 <input type="reset" value="Reset">
             </form>
-        </h2>
+        </div>
     </section>
-</body>
-
-</body>
+    </body>
 </html>
